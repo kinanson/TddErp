@@ -1,0 +1,586 @@
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:42:27.7520 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.ArgumentNullException: 值不能為 null。
+參數名稱: password
+   於 Microsoft.AspNet.Identity.UserManager`2.<CreateAsync>d__d.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   於 TddErp.Api.Controllers.AccountsController.<CreateUser>d__8.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 105
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:46:50.5407 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:47:32.4123 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:48:00.3708 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:48:26.7199 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:48:49.8084 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:49:15.6062 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:50:50.5411 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:54:02.5673 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 15:54:23.2122 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 207
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 21:23:34.5973 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EmployeeDto -> Employee
+TddErp.Model.Dto.EmployeeDto -> TddErp.Model.Models.Employee
+
+Destination path:
+ApplicationUser.Employee.Employee
+
+Source value:
+TddErp.Model.Dto.EmployeeDto
+   於 AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 250
+   於 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs: 行 163
+   於 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs: 行 89
+   於 AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapMapper.cs: 行 22
+   於 AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 250
+   於 AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 131
+   於 AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 120
+   於 AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 69
+   於 AutoMapper.MappingEngine.Map[TDestination](Object source) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 60
+   於 AutoMapper.Mapper.Map[TDestination](Object source) 於 c:\dev\AutoMapper\src\AutoMapper\Mapper.cs: 行 49
+   於 TddErp.Api.Controllers.AccountsController.<PutUser>d__10.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 126
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 21:24:21.7166 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+EmployeeDto -> Employee
+TddErp.Model.Dto.EmployeeDto -> TddErp.Model.Models.Employee
+
+Destination path:
+ApplicationUser.Employee.Employee
+
+Source value:
+TddErp.Model.Dto.EmployeeDto
+   於 AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 250
+   於 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.MapPropertyValue(ResolutionContext context, IMappingEngineRunner mapper, Object mappedObject, PropertyMap propertyMap) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs: 行 163
+   於 AutoMapper.Mappers.TypeMapObjectMapperRegistry.PropertyMapMappingStrategy.Map(ResolutionContext context, IMappingEngineRunner mapper) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapObjectMapperRegistry.cs: 行 89
+   於 AutoMapper.Mappers.TypeMapMapper.Map(ResolutionContext context, IMappingEngineRunner mapper) 於 c:\dev\AutoMapper\src\AutoMapper\Mappers\TypeMapMapper.cs: 行 22
+   於 AutoMapper.MappingEngine.AutoMapper.IMappingEngineRunner.Map(ResolutionContext context) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 250
+   於 AutoMapper.MappingEngine.MapCore(Object source, Type sourceType, Type destinationType, MappingOperationOptions options) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 131
+   於 AutoMapper.MappingEngine.Map(Object source, Type sourceType, Type destinationType, Action`1 opts) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 120
+   於 AutoMapper.MappingEngine.Map[TDestination](Object source, Action`1 opts) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 69
+   於 AutoMapper.MappingEngine.Map[TDestination](Object source) 於 c:\dev\AutoMapper\src\AutoMapper\MappingEngine.cs: 行 60
+   於 AutoMapper.Mapper.Map[TDestination](Object source) 於 c:\dev\AutoMapper\src\AutoMapper\Mapper.cs: 行 49
+   於 TddErp.Api.Controllers.AccountsController.<PutUser>d__10.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 126
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 21:46:20.7433 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.Employee'. Cannot insert duplicate key in object 'dbo.Employee'. The duplicate key value is (320fc601-59fc-43a4-8675-04c701630a8f).
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   於 System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<SaveChanges>d__5a.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<UpdateAsync>d__1c.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.UserManager`2.<UpdateAsync>d__5.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   於 TddErp.Api.Controllers.AccountsController.<PutUser>d__10.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 136
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-12 21:46:36.9721 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.Employee'. Cannot insert duplicate key in object 'dbo.Employee'. The duplicate key value is (320fc601-59fc-43a4-8675-04c701630a8f).
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   於 System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<SaveChanges>d__5a.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<UpdateAsync>d__1c.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.UserManager`2.<UpdateAsync>d__5.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   於 TddErp.Api.Controllers.AccountsController.<PutUser>d__10.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 136
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+

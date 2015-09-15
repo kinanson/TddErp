@@ -1,0 +1,527 @@
+ ==================================================================================================== 
+ 發生時間：2015-09-09 07:38:28.8081 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.OnException 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Violation of PRIMARY KEY constraint 'PK_dbo.Employee'. Cannot insert duplicate key in object 'dbo.Employee'. The duplicate key value is (003).
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.CompleteAsyncExecuteReader()
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryInternal(IAsyncResult asyncResult)
+   於 System.Data.SqlClient.SqlCommand.EndExecuteNonQueryAsync(IAsyncResult asyncResult)
+   於 System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.<ExecuteAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.<UpdateAsync>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<ExecuteInTransactionAsync>d__3d`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStoreAsync>d__39.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<ExecuteAsyncImplementation>d__9`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesInternalAsync>d__31.MoveNext()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<SaveChanges>d__5a.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.EntityFramework.UserStore`6.<DeleteAsync>d__19.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.UserManager`2.<DeleteAsync>d__a.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 Microsoft.AspNet.Identity.AsyncHelper.RunSync[TResult](Func`1 func)
+   於 Microsoft.AspNet.Identity.UserManagerExtensions.Delete[TUser,TKey](UserManager`2 manager, TUser user)
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 224
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ExceptionFilterResult.<ExecuteAsync>d__0.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 07:40:48.9835 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.DivideByZeroException: 嘗試以零除。
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 222
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 20:56:30.7424 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.AspNetUsers_dbo.Employee_EmployeeID". The conflict occurred in database "UNI", table "dbo.AspNetUsers", column 'EmployeeID'.
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   於 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   於 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   於 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   於 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   於 System.Data.Entity.DbContext.SaveChanges()
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 39
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 232
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:02:24.2342 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.InvalidOperationException: 序列未包含項目
+   於 System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   於 System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   於 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 37
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 223
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:12:45.4950 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.AspNetUsers_dbo.Employee_EmployeeID". The conflict occurred in database "UNI", table "dbo.AspNetUsers", column 'EmployeeID'.
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   於 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   於 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   於 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   於 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   於 System.Data.Entity.DbContext.SaveChanges()
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 39
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 222
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:16:26.7434 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.InvalidOperationException: 序列未包含項目
+   於 System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   於 System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   於 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 37
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 227
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:24:02.1410 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.InvalidOperationException: 序列未包含項目
+   於 System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.<GetElementFunction>b__0[TResult](IEnumerable`1 sequence)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   於 System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   於 System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   於 System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 37
+   於 TddErp.Api.Controllers.AccountsController.DeleteEmployee(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 238
+   於 TddErp.Api.Controllers.AccountsController.<DeleteUser>d__12.MoveNext() 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 223
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Threading.Tasks.TaskHelpersExtensions.<CastToObject>d__3`1.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:28:05.9286 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.AspNetUsers_dbo.Employee_EmployeeID". The conflict occurred in database "UNI", table "dbo.AspNetUsers", column 'EmployeeID'.
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   於 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   於 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   於 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   於 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   於 System.Data.Entity.DbContext.SaveChanges()
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 39
+   於 TddErp.Api.Controllers.AccountsController.DeleteEmployee(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 237
+   於 lambda_method(Closure , Object , Object[] )
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
+ ==================================================================================================== 
+ 發生時間：2015-09-09 22:32:45.6050 
+ Log等級：FATAL 
+ Logger：TddErp.Api.Filter.NlogExceptionLogger 
+ Source：TddErp.Api.Filter.NlogExceptionLogger.Log 
+ 錯誤訊息：System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The DELETE statement conflicted with the REFERENCE constraint "FK_dbo.AspNetUsers_dbo.Employee_EmployeeID". The conflict occurred in database "UNI", table "dbo.AspNetUsers", column 'EmployeeID'.
+The statement has been terminated.
+   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   於 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   於 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   於 System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   於 System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   於 System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   於 System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   於 System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   於 System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   於 System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   於 System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   於 System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- 內部例外狀況堆疊追蹤的結尾 ---
+   於 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   於 System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   於 System.Data.Entity.DbContext.SaveChanges()
+   於 TddErp.Service.Interface.EmployeeService.Delete(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Service\Interface\IEmployeeService.cs: 行 39
+   於 TddErp.Api.Controllers.AccountsController.DeleteEmployee(String id) 於 C:\Users\kinanson\Documents\Git FIle\TddErp\TddErp.Api\Controllers\AccountsController.cs: 行 237
+   於 lambda_method(Closure , Object , Object[] )
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   於 System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- 先前擲回例外狀況之位置中的堆疊追蹤結尾 ---
+   於 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   於 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   於 System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext() 
+ StackTrace：
+ 
+ Exception類別： 
+ Exception訊息： 
+ EXCEPTION OCCURRED：
+ 
+ ==================================================================================================== 
+
