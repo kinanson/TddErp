@@ -28,15 +28,15 @@ namespace TddErp.Api.Controllers
         [Route("employees")]
         public IHttpActionResult GetEmployees()
         {
-            return Ok(this.AppUserManager.Users
-                .Select(u => this.TheModelFactory.GetEmployee(u)));
+            var result = this.AppUserManager.Users.Include(x=>x.Employee).ToList();
+            return Ok(result.Select(x=>this.TheModelFactory.GetEmployee(x)));
         }
 
         [RoleAuthorize(Roles="Admin")]
         [Route("members")]
         public IHttpActionResult GetMembers()
         {
-            return Ok(this.AppUserManager.Users
+            return Ok(this.AppUserManager.Users.ToList()
                 .Select(x => this.TheModelFactory.GetMember(x)));
         }
 
@@ -117,6 +117,11 @@ namespace TddErp.Api.Controllers
         public async Task<IHttpActionResult> PutUser(UpdateEmployeeMutipleDto updateEmployeeMutipleDto)
         {
             var appUser = await this.AppUserManager.FindByIdAsync(updateEmployeeMutipleDto.User.Id);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (appUser != null)
             {
                 appUser.RocID = updateEmployeeMutipleDto.User.RocID;
@@ -127,11 +132,6 @@ namespace TddErp.Api.Controllers
                 appUser.Employee.ArriveDate = updateEmployeeMutipleDto.Employee.ArriveDate;
                 appUser.Employee.ExitDate = updateEmployeeMutipleDto.Employee.ExitDate;
                 IdentityResult result = await this.AppUserManager.UpdateAsync(appUser);
-                //string[] roles = this.AppRoleManager.Roles
-                //    .Where(x => x.Users.Any(y => y.UserId == updateEmployeeMutipleDto.User.Id) == true)
-                //    .Select(x => x.Name).ToArray();
-                //result = await this.AppUserManager.RemoveFromRolesAsync(updateEmployeeMutipleDto.User.Id, roles);
-                //result = await this.AppUserManager.AddToRolesAsync(updateEmployeeMutipleDto.User.Id, "Member");
                 if (!result.Succeeded)
                 {
                     return GetErrorResult(result);
@@ -145,6 +145,11 @@ namespace TddErp.Api.Controllers
         public async Task<IHttpActionResult> PutMember(UpdateMemberMutipleDto updateMemberMutipleDto)
         {
             var appUser = await this.AppUserManager.FindByIdAsync(updateMemberMutipleDto.User.Id);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             if (appUser != null)
             {
                 appUser.RocID = updateMemberMutipleDto.User.RocID;

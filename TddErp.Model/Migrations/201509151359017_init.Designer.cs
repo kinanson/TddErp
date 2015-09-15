@@ -13,7 +13,7 @@ namespace TddErp.Model.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201509102331457_init"; }
+            get { return "201509151359017_init"; }
         }
         
         string IMigrationMetadata.Source

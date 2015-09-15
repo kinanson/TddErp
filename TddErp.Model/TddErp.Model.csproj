@@ -46,6 +46,10 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -66,9 +70,9 @@
     <Compile Include="Dto\UpdatePasswordDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
     <Compile Include="Enum\TemplateEnum.cs" />
-    <Compile Include="Migrations\201509102331457_init.cs" />
-    <Compile Include="Migrations\201509102331457_init.Designer.cs">
-      <DependentUpon>201509102331457_init.cs</DependentUpon>
+    <Compile Include="Migrations\201509151359017_init.cs" />
+    <Compile Include="Migrations\201509151359017_init.Designer.cs">
+      <DependentUpon>201509151359017_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbContext\ApplicationDbContext.cs" />
@@ -107,11 +111,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201509102331457_init.resx">
-      <DependentUpon>201509102331457_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201509151359017_init.resx">
+      <DependentUpon>201509151359017_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

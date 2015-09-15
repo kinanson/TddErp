@@ -14,6 +14,7 @@ namespace TddErp.Api.Controllers
     public class RolesController : BaseApiController
     {
 
+        [Authorize]
         [Route("{id:guid}", Name = "GetRoleById")]
         public async Task<IHttpActionResult> GetRole(string Id)
         {
@@ -25,6 +26,7 @@ namespace TddErp.Api.Controllers
             return NotFound();
         }
 
+        [Authorize]
         [Route("GetAllRoles")]
         public IHttpActionResult GetAllRoles()
         {

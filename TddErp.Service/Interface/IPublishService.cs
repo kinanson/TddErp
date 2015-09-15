@@ -32,7 +32,8 @@ namespace TddErp.Service.Interface
             string id = db.Publish.Max(x => x.PublishID);
             id = SeriaNumber.GetThreeID(id);
             entity.PublishID = id;
-            base.Add(entity);
+            db.Publish.Add(entity);
+            db.SaveChanges();
         }
     }
 }

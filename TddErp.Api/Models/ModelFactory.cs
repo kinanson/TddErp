@@ -25,40 +25,11 @@ namespace TddErp.Api.Models
 
         public EmployeeViewModel GetEmployee(ApplicationUser appUser)
         {
-            
-            EmployeeViewModel employeeViewModel = new EmployeeViewModel
-            {
-                User=new UserDto
-                {
-                    Id = appUser.Id,
-                    Email = appUser.Email,
-                    PhoneNumber = appUser.PhoneNumber,
-                    LockoutEnabled = appUser.LockoutEnabled,
-                    UserName = appUser.UserName,
-                    Sex = appUser.Sex,
-                    RocID = appUser.RocID,
-                    RealName = appUser.RealName,
-                    Address = appUser.Address,
-                    BirthDate = appUser.BirthDate,
-                    Roles=_AppUserManager.GetRolesAsync(appUser.Id).Result
-                }
-            };
+
+            EmployeeViewModel employeeViewModel = new EmployeeViewModel();
             if (appUser.Employee != null)
             {
-                employeeViewModel.Employee = new EmployeeDto
-                {
-                    ArriveDate = appUser.Employee.ArriveDate,
-                    ExitDate = appUser.Employee.ExitDate
-                };
-            }
-            return employeeViewModel;
-        }
-
-        public MemberViewModel GetMember(ApplicationUser appUser)
-        {
-            MemberViewModel memberViewModel = new MemberViewModel
-            {
-                User = new UserDto
+                var user = new UserDto
                 {
                     Id = appUser.Id,
                     Email = appUser.Email,
@@ -71,10 +42,39 @@ namespace TddErp.Api.Models
                     Address = appUser.Address,
                     BirthDate = appUser.BirthDate,
                     Roles = _AppUserManager.GetRolesAsync(appUser.Id).Result
-                }
+                };
+                employeeViewModel.Employee = new EmployeeDto
+                {
+                    ArriveDate = appUser.Employee.ArriveDate,
+                    ExitDate = appUser.Employee.ExitDate
+                };
+                employeeViewModel.User = user;
+            }
+            return employeeViewModel;
+        }
+
+        public MemberViewModel GetMember(ApplicationUser appUser)
+        {
+            MemberViewModel memberViewModel = new MemberViewModel
+            {
+                
             };
             if (appUser.Member != null)
             {
+                var user = new UserDto
+                {
+                    Id = appUser.Id,
+                    Email = appUser.Email,
+                    PhoneNumber = appUser.PhoneNumber,
+                    LockoutEnabled = appUser.LockoutEnabled,
+                    UserName = appUser.UserName,
+                    Sex = appUser.Sex,
+                    RocID = appUser.RocID,
+                    RealName = appUser.RealName,
+                    Address = appUser.Address,
+                    BirthDate = appUser.BirthDate,
+                    Roles = _AppUserManager.GetRolesAsync(appUser.Id).Result
+                };
                 var member = new MemberDto();
                 member.JoinDate = appUser.Member.JoinDate;
                 member.Blog = appUser.Member.Blog;
@@ -96,6 +96,8 @@ namespace TddErp.Api.Models
                 if (appUser.Member.Hob16) member.Hobby.Add("資料統計");
                 if (appUser.Member.Hob17) member.Hobby.Add("單晶片與嵌入式");
                 if (appUser.Member.Hob18) member.Hobby.Add("工具軟體");
+                memberViewModel.User = user;
+                memberViewModel.Member = member;
             }
             return memberViewModel;
         }
