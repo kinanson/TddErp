@@ -1,5 +1,6 @@
 namespace TddErp.Model.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace TddErp.Model.Models
         [Required]
         public string PublishName { get; set; }
 
+        [JsonIgnore]
         public virtual ICollection<Books> Books { get; set; }
     }
 }

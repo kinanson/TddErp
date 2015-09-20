@@ -12,7 +12,7 @@ namespace TddErp.Service.Interface
     {
         void Add(T entity);
         void Delete(T entity);
-        IEnumerable<T> GetAll();
+        IQueryable<T> GetAll();
         void Update(T entity);
         T GetById(int Id);
     }
@@ -49,9 +49,9 @@ namespace TddErp.Service.Interface
             db.SaveChanges();
         }
 
-        public virtual IEnumerable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
-            return dbset.AsEnumerable<T>();
+            return dbset.AsQueryable();
         }
 
         public T GetById(int Id)

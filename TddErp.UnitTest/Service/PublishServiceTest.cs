@@ -25,10 +25,17 @@ namespace TddErp.UnitTest.Service
         }
 
         [TestMethod]
-        public void Add()
+        public void AddTest()
         {
             service.Add(new Publish { PublishID = "", PublishName = "anson" });
             Assert.IsTrue(db.Publish.Count() == 3);
+        }
+
+        [TestMethod]
+        public void GetAllTest()
+        {
+            var actuall = service.GetAll();
+            Assert.IsTrue(actuall.Count() == 2);
         }
     }
 }

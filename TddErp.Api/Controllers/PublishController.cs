@@ -10,6 +10,7 @@ using TddErp.Service.Interface;
 
 namespace TddErp.Api.Controllers
 {
+    [Authorize(Roles ="Admin")]
     [RoutePrefix("Api/Publish")]
     public class PublishController : BaseApiController
     {
@@ -22,14 +23,14 @@ namespace TddErp.Api.Controllers
 
         public IHttpActionResult Get()
         {
-            return Ok(service.GetAll());
+            return Ok(service.GetAll().SelectMany(x=>x.Books).ToList());
         }
 
         public IHttpActionResult Get(string publishID)
         {
             return Ok(service.Get(publishID));
         }
-
+        
         public IHttpActionResult post(Publish publish)
         { 
             service.Add(publish);

@@ -1,18 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Web;
 using System.Web.Http;
 using TddErp.Api.Filter;
-using TddErp.Api.Infrastructure;
 using TddErp.Model.Dto;
-using TddErp.Model.InputDto;
 using TddErp.Model.Models;
-using TddErp.Service.Interface;
 using System.Data.Entity;
-using AutoMapper;
 using TddErp.Model.MutipleDto;
 
 namespace TddErp.Api.Controllers
