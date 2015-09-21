@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace TddErp.Model.InputDto
 {
     public class CreateMemberDto
-    {
-       
+    {  
         [Required]
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email")]

@@ -12,16 +12,15 @@ namespace TddErp.Api.Controllers
     public class ValuesController : ApiController
     {
         [Authorize]
-        // GET: api/Value
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
         [Authorize]
-        public string Get(TemplateEnum Id)
+        public string Get(TemplateEnum id)
         {
-            switch (Id)
+            switch (id)
             {
                 case TemplateEnum.Master:
                     return ChooseTemplate.GetMasterTemplate();

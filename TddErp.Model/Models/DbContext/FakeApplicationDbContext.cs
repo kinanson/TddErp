@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TddErp.Model.Models
 {
-    public class FakeApplicationDbContext :DbContext, IContext
+    public class FakeApplicationDbContext : DbContext, IContext
     {
         public IDbSet<BookGroup> BookGroup { get; set; }
         public IDbSet<Books> Books { get; set; }
@@ -26,12 +26,5 @@ namespace TddErp.Model.Models
         public IDbSet<SalesDetails> SalesDetails { get; set; }
         public IDbSet<SalesMaster> SalesMaster { get; set; }
         public IDbSet<Vendor> Vendor { get; set; }
-
-        public int SaveChanges()
-        {
-            return 0;
-        }
-
-     
     }
 }

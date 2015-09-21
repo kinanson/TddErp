@@ -10,18 +10,18 @@ namespace TddErp
     {
         public static string GetYMTen(string maxId)
         {
-            string YMDate = DateTime.Now.ToString("yyyyMM");
+            string yMDate = DateTime.Now.ToString("yyyyMM");
             if (maxId != null)
             {  
                 string headDate = maxId.Substring(0, 6);
                 int lastNumber = int.Parse(maxId.Substring(6));
-                if (headDate == YMDate)
+                if (headDate == yMDate)
                 {
                     lastNumber++;
                     return headDate + lastNumber.ToString("0000");
                 }
             }
-            return YMDate + "0001";
+            return yMDate + "0001";
         }
 
         public static string GetSeq(string maxSeq)

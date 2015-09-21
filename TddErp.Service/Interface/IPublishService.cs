@@ -15,7 +15,6 @@ namespace TddErp.Service.Interface
 
     public class PublishService : EntityService<Publish>, IPublishService
     {
-
         public PublishService(IContext db)
             : base(db)
         {

@@ -69,6 +69,7 @@
     <Compile Include="Dto\RoleDto.cs" />
     <Compile Include="Dto\UpdatePasswordDto.cs" />
     <Compile Include="Dto\UserDto.cs" />
+    <Compile Include="Dto\UsersInRoleModel.cs" />
     <Compile Include="Enum\TemplateEnum.cs" />
     <Compile Include="Migrations\201509151359017_init.cs" />
     <Compile Include="Migrations\201509151359017_init.Designer.cs">

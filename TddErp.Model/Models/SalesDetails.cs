@@ -7,8 +7,7 @@ namespace TddErp.Model.Models
     using System.Data.Entity.Spatial;
 
     public partial class SalesDetails
-    {
-        
+    {   
         [Key]
         [Column(Order = 0)]
         [MaxLength(10)]

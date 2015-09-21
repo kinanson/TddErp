@@ -13,34 +13,68 @@ namespace TddErp.Api.Filter
 {
     public class RoleAuthorize : AuthorizeAttribute
     {
-
-        private static readonly string[] _emptyArray = new string[0];
-
-        private readonly object _typeId = new object();
-
-        private string _roles;
-        private string[] _rolesSplit = _emptyArray;
-        private string _users;
-        private string[] _usersSplit = _emptyArray;
+        private static readonly string[] emptyArray = new string[0];
+        private readonly object typeId = new object();
+        private string roles;
+        private string[] rolesSplit = emptyArray;
+        private string users;
+        private string[] usersSplit = emptyArray;
 
         new public string Roles
         {
-            get { return _roles ?? String.Empty; }
+            get { return roles ?? string.Empty; }
             set
             {
-                _roles = value;
-                _rolesSplit = SplitString(value);
+                roles = value;
+                rolesSplit = SplitString(value);
             }
         }
 
         new public string Users
         {
-            get { return _users ?? String.Empty; }
+            get { return users ?? string.Empty; }
             set
             {
-                _users = value;
-                _usersSplit = SplitString(value);
+                users = value;
+                usersSplit = SplitString(value);
             }
+        }
+
+        public override void OnAuthorization(HttpActionContext actionContext)
+        {
+            if (actionContext == null)
+            {
+                throw new ArgumentNullException("actionContext");
+            }
+
+            if (SkipAuthorization(actionContext))
+            {
+                return;
+            }
+
+            if (!IsAuthorized(actionContext))
+            {
+                HandleUnauthorizedRequest(actionContext);
+            }
+
+            if (!IsAllowed(actionContext))
+            {
+                HandleForbiddenRequest(actionContext);
+            }
+        }
+
+        internal static string[] SplitString(string original)
+        {
+            if (string.IsNullOrEmpty(original))
+            {
+                return emptyArray;
+            }
+            
+            var split = from piece in original.Split(',')
+                        let trimmed = piece.Trim()
+                        where !string.IsNullOrEmpty(trimmed)
+                        select trimmed;
+            return split.ToArray();
         }
 
         protected override bool IsAuthorized(HttpActionContext actionContext)
@@ -67,12 +101,12 @@ namespace TddErp.Api.Filter
             }
 
             IPrincipal user = Thread.CurrentPrincipal;
-            if (_usersSplit.Length > 0 && !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase))
+            if (usersSplit.Length > 0 && !usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase))
             {
                 return false;
             }
 
-            if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole))
+            if (rolesSplit.Length > 0 && !rolesSplit.Any(user.IsInRole))
             {
                 return false;
             }
@@ -80,28 +114,6 @@ namespace TddErp.Api.Filter
             return true;
         }
 
-        public override void OnAuthorization(HttpActionContext actionContext)
-        {
-            if (actionContext == null)
-            {
-                throw new ArgumentNullException("actionContext");
-            }
-
-            if (SkipAuthorization(actionContext))
-            {
-                return;
-            }
-
-            if (!IsAuthorized(actionContext))
-            {
-                HandleUnauthorizedRequest(actionContext);
-            }
-
-            if (!IsAllowed(actionContext))
-            {
-                HandleForbiddenRequest(actionContext);
-            }
-        }
         protected override void HandleUnauthorizedRequest(HttpActionContext actionContext)
         {
             if (actionContext == null)
@@ -143,21 +155,6 @@ namespace TddErp.Api.Filter
 
             return actionContext.ActionDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any()
                    || actionContext.ControllerContext.ControllerDescriptor.GetCustomAttributes<AllowAnonymousAttribute>().Any();
-
-        }
-
-        internal static string[] SplitString(string original)
-        {
-            if (String.IsNullOrEmpty(original))
-            {
-                return _emptyArray;
-            }
-
-            var split = from piece in original.Split(',')
-                        let trimmed = piece.Trim()
-                        where !String.IsNullOrEmpty(trimmed)
-                        select trimmed;
-            return split.ToArray();
         }
     }
 }

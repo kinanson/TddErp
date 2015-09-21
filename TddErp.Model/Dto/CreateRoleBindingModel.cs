@@ -15,11 +15,4 @@ namespace TddErp.Model.InputDto
         [Display(Name = "角色名稱")]
         public string Name { get; set; }
     }
-
-    public class UsersInRoleModel
-    {
-        public string Id { get; set; }
-        public List<string> EnrolledUsers { get; set; }
-        public List<string> RemovedUsers { get; set; }
-    }
 }

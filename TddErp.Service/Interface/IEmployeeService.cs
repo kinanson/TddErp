@@ -8,23 +8,22 @@ using System.Data.Entity;
 
 namespace TddErp.Service.Interface
 {
-    public interface IEmployeeService:IEntityService<Employee>
+    public interface IEmployeeService : IEntityService<Employee>
     {
         Employee GetById(string employeeId);
-        
     }
 
-    public class EmployeeService: EntityService<Employee>,IEmployeeService
+    public class EmployeeService : EntityService<Employee>, IEmployeeService
     {
         public EmployeeService(IContext db)
-            :base(db)
+            : base(db)
         {
             this.db = db;
         }
 
         public Employee GetById(string employeeId)
         {
-            return db.Employee.Include(x=>x.User).FirstOrDefault(x => x.Id == employeeId);
+            return db.Employee.Include(x => x.User).FirstOrDefault(x => x.Id == employeeId);
         }
     }
 }

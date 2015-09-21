@@ -16,7 +16,7 @@ namespace TddErp.Api.GenerateCore
         private int maxLengthAtt = 0;
         private bool isGenerate = true;
         string modelName = string.Empty;
-        string _hasClassName = string.Empty;
+        string hasClassName = string.Empty;
         StringBuilder input = new StringBuilder();
         TagBuilder label;
         private StringBuilder result = new StringBuilder();
@@ -24,7 +24,7 @@ namespace TddErp.Api.GenerateCore
         public string GetAddOrEdit(string ngModelState,string hasClassName)
         {
             result.Clear();
-            _hasClassName = hasClassName;
+            this.hasClassName = hasClassName;
             foreach (var prop in typeof(T).GetProperties())
             {
                 input.Clear();
@@ -108,10 +108,10 @@ namespace TddErp.Api.GenerateCore
 
         private void AddInputAttribute(string ngModelState)
         {
-            if (_hasClassName != null)
+            if (hasClassName != null)
             {
                 input.AppendFormat("<input type='{0}' class='form-control' name='{3}' ng-model='ctrl.{1}.{2}.{3}'", dataTypeAtt,
-                ngModelState, _hasClassName, modelName);
+                ngModelState, hasClassName, modelName);
             }
             else
             {
@@ -141,11 +141,11 @@ namespace TddErp.Api.GenerateCore
 
         void AddKinDatePicker(string ngModelState)
         {
-            if (_hasClassName != null)
+            if (hasClassName != null)
             {
                 input.AppendFormat(@"<kin-date-picker kin-name=""{0}"" model=""ctrl.{1}.{3}.{0}""" +
                     @" open=""ctrl.{0}Opened"" btn-click=""ctrl.{0}Open($event)"" is-required=""{2}""></kin-date-picker>",
-                    modelName, ngModelState, requireAtt == "require"?"true":"false",_hasClassName);
+                    modelName, ngModelState, requireAtt == "require"?"true":"false",hasClassName);
             }
             else
             {
@@ -158,9 +158,9 @@ namespace TddErp.Api.GenerateCore
             AppendNgMessage(modelName);
         }
 
-        private void AppendNgMessage(string ModelName)
+        private void AppendNgMessage(string modelName)
         {
-            result.AppendFormat(@"<div ng-messages=""myForm.{0}.$error"" class=""error"" ng-show=""myForm.{0}.$dirty"">", ModelName).AppendLine();
+            result.AppendFormat(@"<div ng-messages=""myForm.{0}.$error"" class=""error"" ng-show=""myForm.{0}.$dirty"">", modelName).AppendLine();
             result.AppendLine(@"<p ng-messages-include=""{{ngMessagePath}}""></p></div>");
         }
 

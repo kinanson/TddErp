@@ -28,18 +28,12 @@ namespace TddErp.Api
             app.UseWebApi(config);
         }
 
-        private static void AddFilter(HttpConfiguration config)
-        {
-            config.Services.Add(typeof(IExceptionLogger), new NlogExceptionLogger());
-            //config.Filters.Add(new StartLogger());
-        }
-
         public void ConfigureOAuth(IAppBuilder app)
         {
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
-            OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
+            OAuthAuthorizationServerOptions oAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
@@ -48,9 +42,15 @@ namespace TddErp.Api
             };
 
             // Token Generation
-            app.UseOAuthAuthorizationServer(OAuthServerOptions);
+            app.UseOAuthAuthorizationServer(oAuthServerOptions);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
+        }
 
+        private static void AddFilter(HttpConfiguration config)
+        {
+            config.Services.Add(typeof(IExceptionLogger), new NlogExceptionLogger());
+
+            //config.Filters.Add(new StartLogger());
         }
     }
 }

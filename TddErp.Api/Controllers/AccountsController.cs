@@ -35,9 +35,9 @@ namespace TddErp.Api.Controllers
 
         [Authorize]
         [Route("employee/{id:guid}")]
-        public async Task<IHttpActionResult> GetEmployee(string Id)
+        public async Task<IHttpActionResult> GetEmployee(string id)
         {
-            var user = await this.AppUserManager.Users.Include(x=>x.Employee).FirstOrDefaultAsync(x => x.Id==Id);
+            var user = await this.AppUserManager.Users.Include(x=>x.Employee).FirstOrDefaultAsync(x => x.Id==id);
             if (user != null)
             {
                 return Ok(this.TheModelFactory.GetEmployee(user));
@@ -95,9 +95,9 @@ namespace TddErp.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-            IdentityResult result = await this.AppUserManager
-                .ChangePasswordAsync(updatePasswordDto.Id,
-                updatePasswordDto.OldPassword, updatePasswordDto.Password);
+            IdentityResult result = await this.AppUserManager.ChangePasswordAsync(
+                updatePasswordDto.Id,updatePasswordDto.OldPassword,
+                updatePasswordDto.Password);
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -161,7 +161,6 @@ namespace TddErp.Api.Controllers
             }
             return Ok();
         }
-
 
         [Route("user/{id:guid}")]
         public async Task<IHttpActionResult> DeleteUser(string id)

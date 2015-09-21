@@ -43,6 +43,5 @@
             var kinanson = manager.FindByName("kinanson");
             manager.AddToRoles(kinanson.Id, new string[] { "Admin" });
         }
-
     }
 }

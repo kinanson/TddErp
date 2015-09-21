@@ -15,22 +15,23 @@ namespace TddErp.Api.Controllers
     public class BaseApiController : ApiController
     {
         protected Logger logger = LogManager.GetCurrentClassLogger();
-        private ModelFactory _modelFactory;
-        private ApplicationUserManager _AppUserManager = null;
+        private ModelFactory modelFactory;
+        private ApplicationUserManager appUserManager = null;
+        private ApplicationRoleManager appRoleManager = null;
+
         protected ApplicationUserManager AppUserManager
         {
             get
             {
-                return _AppUserManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                return appUserManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
         }
-
-        private ApplicationRoleManager _AppRoleManager = null;
+     
         protected ApplicationRoleManager AppRoleManager
         {
             get
             {
-                return _AppRoleManager ?? Request.GetOwinContext().GetUserManager<ApplicationRoleManager>();
+                return appRoleManager ?? Request.GetOwinContext().GetUserManager<ApplicationRoleManager>();
             }
         }
 
@@ -38,11 +39,11 @@ namespace TddErp.Api.Controllers
         {
             get
             {
-                if (_modelFactory == null)
+                if (modelFactory == null)
                 {
-                    _modelFactory = new ModelFactory(this.Request, this.AppUserManager);
+                    modelFactory = new ModelFactory(this.Request, this.AppUserManager);
                 }
-                return _modelFactory;
+                return modelFactory;
             }
         }
 
@@ -58,7 +59,7 @@ namespace TddErp.Api.Controllers
                 {
                     foreach (string error in result.Errors)
                     {
-                        ModelState.AddModelError("", error);
+                        ModelState.AddModelError(string.Empty, error);
                     }
                 }
                 if (ModelState.IsValid)

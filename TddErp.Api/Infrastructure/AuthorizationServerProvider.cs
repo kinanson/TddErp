@@ -9,7 +9,6 @@ using System.Web;
 using TddErp.Model.Models;
 using Microsoft.AspNet.Identity.Owin;
 
-
 namespace TddErp.Api.Infrastructure
 {
     public class AuthorizationServerProvider : OAuthAuthorizationServerProvider

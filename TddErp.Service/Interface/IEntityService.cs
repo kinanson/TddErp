@@ -14,7 +14,7 @@ namespace TddErp.Service.Interface
         void Delete(T entity);
         IQueryable<T> GetAll();
         void Update(T entity);
-        T GetById(int Id);
+        T GetById(int id);
     }
 
     public abstract class EntityService<T> : IEntityService<T> where T :class
@@ -54,9 +54,9 @@ namespace TddErp.Service.Interface
             return dbset.AsQueryable();
         }
 
-        public T GetById(int Id)
+        public T GetById(int id)
         {
-            return dbset.Find(Id);
+            return dbset.Find(id);
         }
     }
 }

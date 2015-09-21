@@ -16,7 +16,6 @@
             SalesDetails = new HashSet<SalesDetails>();
         }
         
-        
         [Display(Name="書號")]
         [Key]
         [MaxLength(10)]

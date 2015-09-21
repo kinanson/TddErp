@@ -14,18 +14,17 @@ namespace TddErp.Api.Models
 {
     public class ModelFactory
     {
-        private UrlHelper _UrlHelper;
-        private ApplicationUserManager _AppUserManager;
+        private UrlHelper urlHelper;
+        private ApplicationUserManager appUserManager;
 
         public ModelFactory(HttpRequestMessage request, ApplicationUserManager appUserManager)
         {
-            _UrlHelper = new UrlHelper(request);
-            _AppUserManager = appUserManager;
+            urlHelper = new UrlHelper(request);
+            this.appUserManager = appUserManager;
         }
 
         public EmployeeViewModel GetEmployee(ApplicationUser appUser)
         {
-
             EmployeeViewModel employeeViewModel = new EmployeeViewModel();
             if (appUser.Employee != null)
             {
@@ -41,7 +40,7 @@ namespace TddErp.Api.Models
                     RealName = appUser.RealName,
                     Address = appUser.Address,
                     BirthDate = appUser.BirthDate,
-                    Roles = _AppUserManager.GetRolesAsync(appUser.Id).Result
+                    Roles = appUserManager.GetRolesAsync(appUser.Id).Result
                 };
                 employeeViewModel.Employee = new EmployeeDto
                 {
@@ -55,10 +54,7 @@ namespace TddErp.Api.Models
 
         public MemberViewModel GetMember(ApplicationUser appUser)
         {
-            MemberViewModel memberViewModel = new MemberViewModel
-            {
-                
-            };
+            MemberViewModel memberViewModel = new MemberViewModel();
             if (appUser.Member != null)
             {
                 var user = new UserDto
@@ -73,7 +69,7 @@ namespace TddErp.Api.Models
                     RealName = appUser.RealName,
                     Address = appUser.Address,
                     BirthDate = appUser.BirthDate,
-                    Roles = _AppUserManager.GetRolesAsync(appUser.Id).Result
+                    Roles = appUserManager.GetRolesAsync(appUser.Id).Result
                 };
                 var member = new MemberDto();
                 member.JoinDate = appUser.Member.JoinDate;
@@ -106,7 +102,7 @@ namespace TddErp.Api.Models
         {
             return new RoleDto
             {
-                Url = _UrlHelper.Link("GetRoleById", new { id = appRole.Id }),
+                Url = urlHelper.Link("GetRoleById", new { id = appRole.Id }),
                 Id = appRole.Id,
                 Name = appRole.Name
             }; 

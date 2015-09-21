@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using TddErp.Model.Dto;
 using TddErp.Model.InputDto;
 
 namespace TddErp.Api.Controllers
@@ -13,12 +14,11 @@ namespace TddErp.Api.Controllers
     [RoutePrefix("api/roles")]
     public class RolesController : BaseApiController
     {
-
         [Authorize]
         [Route("{id:guid}", Name = "GetRoleById")]
-        public async Task<IHttpActionResult> GetRole(string Id)
+        public async Task<IHttpActionResult> GetRole(string id)
         {
-            var role = await this.AppRoleManager.FindByIdAsync(Id);
+            var role = await this.AppRoleManager.FindByIdAsync(id);
             if (role != null)
             {
                 return Ok(TheModelFactory.Create(role));
@@ -52,9 +52,9 @@ namespace TddErp.Api.Controllers
         }
 
         [Route("{id:guid}")]
-        public async Task<IHttpActionResult> DeleteRole(string Id)
+        public async Task<IHttpActionResult> DeleteRole(string id)
         {
-            var role = await this.AppRoleManager.FindByIdAsync(Id);
+            var role = await this.AppRoleManager.FindByIdAsync(id);
             if (role != null)
             {
                 IdentityResult result = await this.AppRoleManager.DeleteAsync(role);
@@ -73,7 +73,7 @@ namespace TddErp.Api.Controllers
             var role = await this.AppRoleManager.FindByIdAsync(model.Id);
             if (role == null)
             {
-                ModelState.AddModelError("", "Role does not exist");
+                ModelState.AddModelError(string.Empty, "Role does not exist");
                 return BadRequest(ModelState);
             }
             foreach (string user in model.EnrolledUsers)
@@ -81,7 +81,7 @@ namespace TddErp.Api.Controllers
                 var appUser = await this.AppUserManager.FindByIdAsync(user);
                 if (appUser == null)
                 {
-                    ModelState.AddModelError("", String.Format("User: {0} does not exists", user));
+                    ModelState.AddModelError(string.Empty, string.Format("User: {0} does not exists", user));
                     continue;
                 }
                 if (!this.AppUserManager.IsInRole(user, role.Name))
@@ -89,7 +89,7 @@ namespace TddErp.Api.Controllers
                     IdentityResult result = await this.AppUserManager.AddToRoleAsync(user, role.Name);
                     if (!result.Succeeded)
                     {
-                        ModelState.AddModelError("", String.Format("User: {0} could not be added to role", user));
+                        ModelState.AddModelError(string.Empty, string.Format("User: {0} could not be added to role", user));
                     }
                 }
             }
@@ -98,13 +98,13 @@ namespace TddErp.Api.Controllers
                 var appUser = await this.AppUserManager.FindByIdAsync(user);
                 if (appUser == null)
                 {
-                    ModelState.AddModelError("", String.Format("User: {0} does not exists", user));
+                    ModelState.AddModelError(string.Empty, string.Format("User: {0} does not exists", user));
                     continue;
                 }
                 IdentityResult result = await this.AppUserManager.RemoveFromRoleAsync(user, role.Name);
                 if (!result.Succeeded)
                 {
-                    ModelState.AddModelError("", String.Format("User: {0} could not be removed from role", user));
+                    ModelState.AddModelError(string.Empty, string.Format("User: {0} could not be removed from role", user));
                 }
             }
             if (!ModelState.IsValid)
@@ -118,7 +118,6 @@ namespace TddErp.Api.Controllers
         [HttpPut]
         public async Task<IHttpActionResult> AssignRolesToUser([FromUri] string id, [FromBody] string[] rolesToAssign)
         {
-
             var appUser = await this.AppUserManager.FindByIdAsync(id);
             if (appUser == null)
             {
@@ -128,19 +127,19 @@ namespace TddErp.Api.Controllers
             var rolesNotExists = rolesToAssign.Except(this.AppRoleManager.Roles.Select(x => x.Name)).ToArray();
             if (rolesNotExists.Count() > 0)
             {
-                ModelState.AddModelError("", string.Format("Roles '{0}' does not exixts in the system", string.Join(",", rolesNotExists)));
+                ModelState.AddModelError(string.Empty, string.Format("Roles '{0}' does not exixts in the system", string.Join(",", rolesNotExists)));
                 return BadRequest(ModelState);
             }
             IdentityResult removeResult = await this.AppUserManager.RemoveFromRolesAsync(appUser.Id, currentRoles.ToArray());
             if (!removeResult.Succeeded)
             {
-                ModelState.AddModelError("", "Failed to remove user roles");
+                ModelState.AddModelError(string.Empty, "Failed to remove user roles");
                 return BadRequest(ModelState);
             }
             IdentityResult addResult = await this.AppUserManager.AddToRolesAsync(appUser.Id, rolesToAssign);
             if (!addResult.Succeeded)
             {
-                ModelState.AddModelError("", "Failed to add user roles");
+                ModelState.AddModelError(string.Empty, "Failed to add user roles");
                 return BadRequest(ModelState);
             }
             return Ok();

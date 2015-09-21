@@ -23,7 +23,7 @@ namespace TddErp.Api.Controllers
 
         public IHttpActionResult Get()
         {
-            return Ok(service.GetAll().SelectMany(x=>x.Books).ToList());
+            return Ok(service.GetAll().SelectMany(x => x.Books).ToList());
         }
 
         public IHttpActionResult Get(string publishID)
@@ -31,13 +31,13 @@ namespace TddErp.Api.Controllers
             return Ok(service.Get(publishID));
         }
         
-        public IHttpActionResult post(Publish publish)
+        public IHttpActionResult Post(Publish publish)
         { 
             service.Add(publish);
             return Ok();
         }
 
-        public IHttpActionResult delete(string publishID)
+        public IHttpActionResult Delete(string publishID)
         {
             var publish = service.Get(publishID);
             service.Delete(publish);
