@@ -4,7 +4,6 @@ namespace TddErp.Model.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("RecvMaster")]
     public partial class RecvMaster
@@ -14,12 +13,12 @@ namespace TddErp.Model.Models
             RecvDetails = new HashSet<RecvDetails>();
         }
 
-        [Display(Name="入庫單號碼")]
+        [Display(Name = "入庫單號碼")]
         [Key]
         [MaxLength(10)]
         public string RecvID { get; set; }
 
-        [Display(Name="入庫單日期")]
+        [Display(Name = "入庫單日期")]
         [DataType(DataType.Date)]
         public DateTime RecvDate { get; set; }
 

@@ -1,11 +1,9 @@
 namespace TddErp.Model.Models
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Vendor")]
     public partial class Vendor
@@ -15,7 +13,7 @@ namespace TddErp.Model.Models
             PurchaseMaster = new HashSet<PurchaseMaster>();
         }
 
-        [Display(Name="廠商編號")]
+        [Display(Name = "廠商編號")]
         [MaxLength(5)]
         [ReadOnly(true)]
         public string VendorID { get; set; }

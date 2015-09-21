@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TddErp.Common;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Ploeh.AutoFixture;
 
 namespace TddErp.UnitTest.Common
@@ -27,7 +25,7 @@ namespace TddErp.UnitTest.Common
         public void GetEmployeeID()
         {
             var actual = SeriaNumber.GetThreeID("001");
-            Assert.AreEqual("002",actual);
+            Assert.AreEqual("002", actual);
         }
 
         [TestMethod]

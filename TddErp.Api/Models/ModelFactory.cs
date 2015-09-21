@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Web;
 using System.Web.Http.Routing;
 using TddErp.Api.Infrastructure;
 using TddErp.Api.ViewModel;
@@ -105,7 +101,7 @@ namespace TddErp.Api.Models
                 Url = urlHelper.Link("GetRoleById", new { id = appRole.Id }),
                 Id = appRole.Id,
                 Name = appRole.Name
-            }; 
+            };
         }
     }
 }

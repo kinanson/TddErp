@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
+﻿using System.Text;
 using TddErp.Model.Models;
 
 namespace TddErp.Api.GenerateCore
@@ -14,7 +10,7 @@ namespace TddErp.Api.GenerateCore
             StringBuilder result = new StringBuilder();
             GenerateListHtml<Employee> generateListHtml = new GenerateListHtml<Employee>();
             result.AppendLine("新增部份");
-            result.AppendLine(generateListHtml.GetAddOrEdit("add","member"));
+            result.AppendLine(generateListHtml.GetAddOrEdit("add", "member"));
             result.AppendLine();
             result.AppendLine();
             result.AppendLine("顯示部份");

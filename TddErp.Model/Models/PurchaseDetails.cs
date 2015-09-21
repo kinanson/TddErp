@@ -1,11 +1,8 @@
 namespace TddErp.Model.Models
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     public partial class PurchaseDetails
     {
@@ -14,27 +11,28 @@ namespace TddErp.Model.Models
         [MaxLength(10)]
         public string PurchaseID { get; set; }
 
-        [Display(Name="兜Ω")]
+        [Display(Name = "兜Ω")]
         [Key]
         [Column(Order = 1)]
         [ReadOnly(true)]
         public byte Seq { get; set; }
-      
-        [Display(Name="计秖")]
+
+        [Display(Name = "计秖")]
         [Required]
         public int Quantity { get; set; }
 
-        [Display(Name="虫基")]
+        [Display(Name = "虫基")]
         [Required]
         public int Price { get; set; }
 
-        [Display(Name="肂")]
+        [Display(Name = "肂")]
         [Required]
         public int SubTotal { get; set; }
 
         [Required]
         [MaxLength(10)]
         public string BookID { get; set; }
+
         public virtual Books Books { get; set; }
 
         public virtual PurchaseMaster PurchaseMaster { get; set; }

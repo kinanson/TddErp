@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TddErp.Model.Models;
+﻿using TddErp.Model.Models;
 
 namespace TddErp.Service.Interface
 {
@@ -12,10 +7,10 @@ namespace TddErp.Service.Interface
         string GetId(string memberId);
     }
 
-    public class MemberService:EntityService<Member>,IMemberService
+    public class MemberService : EntityService<Member>, IMemberService
     {
         public MemberService(IContext db)
-            :base(db)
+            : base(db)
         {
             this.db = db;
         }

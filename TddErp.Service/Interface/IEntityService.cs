@@ -1,23 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TddErp.Model.Models;
 
 namespace TddErp.Service.Interface
 {
-   public interface IEntityService<T> where T : class
+    public interface IEntityService<T> where T : class
     {
         void Add(T entity);
+
         void Delete(T entity);
+
         IQueryable<T> GetAll();
+
         void Update(T entity);
+
         T GetById(int id);
     }
 
-    public abstract class EntityService<T> : IEntityService<T> where T :class
+    public abstract class EntityService<T> : IEntityService<T> where T : class
     {
         protected IContext db;
         protected DbSet<T> dbset;
@@ -31,7 +32,7 @@ namespace TddErp.Service.Interface
         public virtual void Add(T entity)
         {
             if (entity == null) throw new ArgumentNullException("entity");
-            dbset.Add(entity);            
+            dbset.Add(entity);
             db.SaveChanges();
         }
 

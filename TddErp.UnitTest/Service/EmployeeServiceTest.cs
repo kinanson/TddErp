@@ -1,12 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using TddErp.Model.Models;
-using TddErp.Service.Interface;
-using System.Data.Entity;
-using System.Collections.Generic;
-using NSubstitute;
-using FluentAssertions;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TddErp.UnitTest.Service
 {

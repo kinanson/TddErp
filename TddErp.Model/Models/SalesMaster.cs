@@ -4,7 +4,6 @@ namespace TddErp.Model.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("SalesMaster")]
     public partial class SalesMaster
@@ -14,7 +13,7 @@ namespace TddErp.Model.Models
             SalesDetails = new HashSet<SalesDetails>();
         }
 
-        [Display(Name="¾P°â¸¹½X")]
+        [Display(Name = "¾P°â¸¹½X")]
         [Key]
         [MaxLength(10)]
         public string SalesID { get; set; }
@@ -45,7 +44,7 @@ namespace TddErp.Model.Models
         [Required]
         [MaxLength(1)]
         public string CustomerGroup { get; set; }
-      
+
         public virtual Employee Employee { get; set; }
         public virtual Member Member { get; set; }
 

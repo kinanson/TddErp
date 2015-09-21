@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TddErp.Model.Dto
 {
     public class MemberDto
-    {  
+    {
         public DateTime JoinDate { get; set; }
         public string Blog { get; set; }
         public List<string> Hobby { get; set; }

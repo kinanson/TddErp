@@ -69,7 +69,6 @@ namespace TddErp.Model.Models
 
         public T Detach(T item)
         {
-            
             this.data.Remove(item);
             return item;
         }
@@ -219,6 +218,4 @@ namespace TddErp.Model.Models
 
         public string Url { get; set; }
     }
-
-   
 }

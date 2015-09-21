@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using TddErp.Api.GenerateCore;
 using TddErp.Model.Enum;
@@ -24,10 +20,13 @@ namespace TddErp.Api.Controllers
             {
                 case TemplateEnum.Master:
                     return ChooseTemplate.GetMasterTemplate();
+
                 case TemplateEnum.MasterDtoName:
                     return "value";
+
                 case TemplateEnum.MasterDetail:
                     return "value";
+
                 default:
                     return "value";
             }

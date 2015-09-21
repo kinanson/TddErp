@@ -1,18 +1,17 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TddErp.Model.Models;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using TddErp.Service.Interface;
-using NSubstitute;
 using System.Linq;
+using TddErp.Model.Models;
+using TddErp.Service.Interface;
 
 namespace TddErp.UnitTest.Service
 {
     [TestClass]
     public class PublishServiceTest
     {
-        PublishService service = null;
-        IContext db = new FakeApplicationDbContext();
+        private PublishService service = null;
+        private IContext db = new FakeApplicationDbContext();
+
         public PublishServiceTest()
         {
             var publishs = new List<Publish>

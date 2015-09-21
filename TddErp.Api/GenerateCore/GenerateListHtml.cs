@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Text;
-using System.Web;
 using System.Web.Mvc;
 
 namespace TddErp.Api.GenerateCore
@@ -15,13 +12,13 @@ namespace TddErp.Api.GenerateCore
         private int minLengthAtt = 0;
         private int maxLengthAtt = 0;
         private bool isGenerate = true;
-        string modelName = string.Empty;
-        string hasClassName = string.Empty;
-        StringBuilder input = new StringBuilder();
-        TagBuilder label;
+        private string modelName = string.Empty;
+        private string hasClassName = string.Empty;
+        private StringBuilder input = new StringBuilder();
+        private TagBuilder label;
         private StringBuilder result = new StringBuilder();
 
-        public string GetAddOrEdit(string ngModelState,string hasClassName)
+        public string GetAddOrEdit(string ngModelState, string hasClassName)
         {
             result.Clear();
             this.hasClassName = hasClassName;
@@ -49,6 +46,7 @@ namespace TddErp.Api.GenerateCore
                         case "date":
                             AddKinDatePicker(ngModelState);
                             break;
+
                         default:
                             AddInputAttribute(ngModelState);
                             break;
@@ -118,7 +116,7 @@ namespace TddErp.Api.GenerateCore
                 input.AppendFormat("<input type='{0}' class='form-control' name='{2}' ng-model='ctrl.{1}.{2}'", dataTypeAtt,
                 ngModelState, modelName);
             }
-           
+
             if (!string.IsNullOrEmpty(requireAtt))
             {
                 input.Append(" required");
@@ -139,19 +137,19 @@ namespace TddErp.Api.GenerateCore
             result.AppendLine("</div>");
         }
 
-        void AddKinDatePicker(string ngModelState)
+        private void AddKinDatePicker(string ngModelState)
         {
             if (hasClassName != null)
             {
                 input.AppendFormat(@"<kin-date-picker kin-name=""{0}"" model=""ctrl.{1}.{3}.{0}""" +
                     @" open=""ctrl.{0}Opened"" btn-click=""ctrl.{0}Open($event)"" is-required=""{2}""></kin-date-picker>",
-                    modelName, ngModelState, requireAtt == "require"?"true":"false",hasClassName);
+                    modelName, ngModelState, requireAtt == "require" ? "true" : "false", hasClassName);
             }
             else
             {
                 input.AppendFormat(@"<kin-date-picker kin-name=""{0}"" model=""ctrl.{1}.{0}""" +
                     @" open=""ctrl.{0}Opened"" btn-click=""ctrl.{0}Open($event)"" is-required=""{2}""></kin-date-picker>",
-                    modelName, ngModelState, requireAtt == "require"?"true":"false");
+                    modelName, ngModelState, requireAtt == "require" ? "true" : "false");
             }
             result.AppendLine(label.ToString());
             result.AppendLine(input.ToString());
@@ -164,7 +162,7 @@ namespace TddErp.Api.GenerateCore
             result.AppendLine(@"<p ng-messages-include=""{{ngMessagePath}}""></p></div>");
         }
 
-        void SetLabel(Attribute attr)
+        private void SetLabel(Attribute attr)
         {
             if (attr is DisplayAttribute)
             {
@@ -173,7 +171,7 @@ namespace TddErp.Api.GenerateCore
         }
 
         private void SetValidateAttribute(Attribute attr)
-        {  
+        {
             if (attr is RequiredAttribute)
             {
                 requireAtt = "require";
@@ -199,12 +197,15 @@ namespace TddErp.Api.GenerateCore
                 case DataType.Password:
                     dataTypeAtt = "password";
                     break;
+
                 case DataType.EmailAddress:
                     dataTypeAtt = "email";
                     break;
+
                 case DataType.DateTime:
                     dataTypeAtt = "datetime";
                     break;
+
                 case DataType.Date:
                     dataTypeAtt = "date";
                     break;

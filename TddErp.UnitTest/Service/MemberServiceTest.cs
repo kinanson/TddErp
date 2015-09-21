@@ -1,20 +1,16 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 using TddErp.Model.Models;
 using TddErp.Service.Interface;
-using System.Data.Entity;
-using NSubstitute;
-using System.Collections.Generic;
-using Ploeh.AutoFixture;
 
 namespace TddErp.UnitTest.Service
 {
     [TestClass]
     public class MemberServiceTest
     {
-        MemberService service = null;
-        IContext db=new FakeApplicationDbContext();
+        private MemberService service = null;
+        private IContext db = new FakeApplicationDbContext();
+
         public MemberServiceTest()
         {
             var members = new List<Member>

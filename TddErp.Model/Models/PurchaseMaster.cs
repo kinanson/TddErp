@@ -5,7 +5,6 @@ namespace TddErp.Model.Models
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("PurchaseMaster")]
     public partial class PurchaseMaster
@@ -15,18 +14,18 @@ namespace TddErp.Model.Models
             PurchaseDetails = new HashSet<PurchaseDetails>();
         }
 
-        [Display(Name="進貨編號")]
+        [Display(Name = "進貨編號")]
         [Key]
         [MaxLength(10)]
         [ReadOnly(true)]
         public string PurchaseID { get; set; }
 
-         [Display(Name = "進貨日期")]
+        [Display(Name = "進貨日期")]
         [Required]
         [Column(TypeName = "date")]
         public DateTime PurchaseDate { get; set; }
 
-        [Display(Name="發票號碼")]
+        [Display(Name = "發票號碼")]
         [MaxLength(10)]
         public string InvoiceNo { get; set; }
 
@@ -44,6 +43,7 @@ namespace TddErp.Model.Models
         [Required]
         [MaxLength(5)]
         public string VendorID { get; set; }
+
         public virtual Vendor Vendor { get; set; }
     }
 }

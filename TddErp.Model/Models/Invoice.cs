@@ -1,15 +1,13 @@
 namespace TddErp.Model.Models
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Invoice")]
     public partial class Invoice
     {
-        [Display(Name="發票年度")]
+        [Display(Name = "發票年度")]
         [MaxLength(4)]
         public string InvoiceYear { get; set; }
 
@@ -40,7 +38,7 @@ namespace TddErp.Model.Models
         [Display(Name = "營業稅")]
         public int? ValueAddTax { get; set; }
 
-        [Display(Name="使用狀態")]
+        [Display(Name = "使用狀態")]
         [MaxLength(1)]
         public string IsUsed { get; set; }
 

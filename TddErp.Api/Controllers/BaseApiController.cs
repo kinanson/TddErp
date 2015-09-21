@@ -1,14 +1,11 @@
-﻿using NLog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using NLog;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using TddErp.Api.Infrastructure;
 using TddErp.Api.Models;
-using System.Net.Http;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.AspNet.Identity;
 
 namespace TddErp.Api.Controllers
 {
@@ -26,7 +23,7 @@ namespace TddErp.Api.Controllers
                 return appUserManager ?? Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
         }
-     
+
         protected ApplicationRoleManager AppRoleManager
         {
             get

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using TddErp.Api.Filter;
 using TddErp.Model.Dto;
 using TddErp.Model.Models;
-using System.Data.Entity;
 using TddErp.Model.MutipleDto;
 
 namespace TddErp.Api.Controllers
@@ -21,11 +21,11 @@ namespace TddErp.Api.Controllers
         [Route("employees")]
         public IHttpActionResult GetEmployees()
         {
-            var result = this.AppUserManager.Users.Include(x=>x.Employee).ToList();
-            return Ok(result.Select(x=>this.TheModelFactory.GetEmployee(x)));
+            var result = this.AppUserManager.Users.Include(x => x.Employee).ToList();
+            return Ok(result.Select(x => this.TheModelFactory.GetEmployee(x)));
         }
 
-        [RoleAuthorize(Roles="Admin")]
+        [RoleAuthorize(Roles = "Admin")]
         [Route("members")]
         public IHttpActionResult GetMembers()
         {
@@ -37,7 +37,7 @@ namespace TddErp.Api.Controllers
         [Route("employee/{id:guid}")]
         public async Task<IHttpActionResult> GetEmployee(string id)
         {
-            var user = await this.AppUserManager.Users.Include(x=>x.Employee).FirstOrDefaultAsync(x => x.Id==id);
+            var user = await this.AppUserManager.Users.Include(x => x.Employee).FirstOrDefaultAsync(x => x.Id == id);
             if (user != null)
             {
                 return Ok(this.TheModelFactory.GetEmployee(user));
@@ -79,7 +79,7 @@ namespace TddErp.Api.Controllers
             IdentityResult addUserResult = await this.AppUserManager.CreateAsync(createUserModel, createUserModel.PasswordHash);
             var userName = await AppUserManager.FindByNameAsync(createUserModel.UserName);
             addUserResult = await this.AppUserManager.AddToRolesAsync(userName.Id, "Employee");
-           
+
             if (!addUserResult.Succeeded)
             {
                 return GetErrorResult(addUserResult);
@@ -96,7 +96,7 @@ namespace TddErp.Api.Controllers
                 return BadRequest(ModelState);
             }
             IdentityResult result = await this.AppUserManager.ChangePasswordAsync(
-                updatePasswordDto.Id,updatePasswordDto.OldPassword,
+                updatePasswordDto.Id, updatePasswordDto.OldPassword,
                 updatePasswordDto.Password);
             if (!result.Succeeded)
             {
@@ -153,7 +153,7 @@ namespace TddErp.Api.Controllers
                 appUser.Member.Blog = updateMemberMutipleDto.Member.Blog;
                 appUser.Member.JoinDate = updateMemberMutipleDto.Member.JoinDate;
                 IdentityResult result = await this.AppUserManager.UpdateAsync(appUser);
-               
+
                 if (!result.Succeeded)
                 {
                     return GetErrorResult(result);
@@ -168,13 +168,13 @@ namespace TddErp.Api.Controllers
             var appUser = await this.AppUserManager.FindByIdAsync(id);
             var employee = appUser.Employee;
             if (appUser != null)
-            {   
+            {
                 IdentityResult result = this.AppUserManager.Delete(appUser);
                 if (!result.Succeeded)
                 {
                     return GetErrorResult(result);
                 }
-               
+
                 return Ok();
             }
             return NotFound();

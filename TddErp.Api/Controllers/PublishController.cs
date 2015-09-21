@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Linq;
 using System.Web.Http;
-using TddErp.Common;
 using TddErp.Model.Models;
 using TddErp.Service.Interface;
 
 namespace TddErp.Api.Controllers
 {
-    [Authorize(Roles ="Admin")]
+    [Authorize(Roles = "Admin")]
     [RoutePrefix("Api/Publish")]
     public class PublishController : BaseApiController
     {
-        IPublishService service;
+        private IPublishService service;
 
         public PublishController(IPublishService service)
         {
@@ -30,9 +25,9 @@ namespace TddErp.Api.Controllers
         {
             return Ok(service.Get(publishID));
         }
-        
+
         public IHttpActionResult Post(Publish publish)
-        { 
+        {
             service.Add(publish);
             return Ok();
         }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TddErp
 {
@@ -12,7 +8,7 @@ namespace TddErp
         {
             string yMDate = DateTime.Now.ToString("yyyyMM");
             if (maxId != null)
-            {  
+            {
                 string headDate = maxId.Substring(0, 6);
                 int lastNumber = int.Parse(maxId.Substring(6));
                 if (headDate == yMDate)

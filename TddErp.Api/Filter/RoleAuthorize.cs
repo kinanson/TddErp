@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -69,7 +68,7 @@ namespace TddErp.Api.Filter
             {
                 return emptyArray;
             }
-            
+
             var split = from piece in original.Split(',')
                         let trimmed = piece.Trim()
                         where !string.IsNullOrEmpty(trimmed)

@@ -1,11 +1,9 @@
 ﻿namespace TddErp.Model.Models
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("BookType")]
     public partial class BookType
@@ -17,11 +15,11 @@
 
         [MaxLength(3)]
         [ReadOnly(true)]
-        [Display(Name="書藉小類編號")]
+        [Display(Name = "書藉小類編號")]
         public string BookTypeID { get; set; }
 
         [MaxLength(20)]
-        [Display(Name="書藉小類名稱")]
+        [Display(Name = "書藉小類名稱")]
         [Required]
         public string BookTypeName { get; set; }
 

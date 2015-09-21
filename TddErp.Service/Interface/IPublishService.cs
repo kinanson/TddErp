@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TddErp.Common;
+﻿using System.Linq;
 using TddErp.Model.Models;
 
 namespace TddErp.Service.Interface
 {
-    public interface IPublishService:IEntityService<Publish>
+    public interface IPublishService : IEntityService<Publish>
     {
         Publish Get(string publishID);
     }

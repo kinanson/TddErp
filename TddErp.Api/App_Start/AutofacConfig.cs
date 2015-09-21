@@ -1,11 +1,8 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using Owin;
-using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Web;
 using System.Web.Http;
 using TddErp.Model.Models;
 
@@ -21,7 +18,7 @@ namespace TddErp.Api.App_Start
             // 註冊Web API Controllers
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
-            // 註冊相依關係              
+            // 註冊相依關係
             //Service
             builder.RegisterAssemblyTypes(Assembly.Load("TddErp.Service"))
                 .Where(x => x.Name.EndsWith("Service")).AsImplementedInterfaces();

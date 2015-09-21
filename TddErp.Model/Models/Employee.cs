@@ -3,10 +3,8 @@
     using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Employee")]
     public partial class Employee
@@ -23,10 +21,10 @@
         [DataType(DataType.Date)]
         public DateTime? ArriveDate { get; set; }
 
-        [Display(Name ="離職日")]
+        [Display(Name = "離職日")]
         [DataType(DataType.Date)]
         public DateTime? ExitDate { get; set; }
-        
+
         public virtual ApplicationUser User { get; set; }
         public virtual ICollection<SalesMaster> SalesMaster { get; set; }
     }

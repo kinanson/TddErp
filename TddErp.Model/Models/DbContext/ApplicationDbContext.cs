@@ -1,10 +1,7 @@
 namespace TddErp.Model.Models
 {
-    using System;
-    using System.Data.Entity;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Linq;
     using Microsoft.AspNet.Identity.EntityFramework;
+    using System.Data.Entity;
     using System.Data.Entity.ModelConfiguration.Conventions;
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>, IContext
