@@ -19,15 +19,15 @@ namespace TddErp.UnitTest.Service
                 new Publish {PublishID="001" },
                 new Publish {PublishID="002" }
             };
-            db.Publish = new FakeDbSet<Publish>(publishs);
-            service = new PublishService(db);
+            Db.Publish = new FakeDbSet<Publish>(publishs);
+            service = new PublishService(Db);
         }
 
         [TestMethod]
         public void AddTest()
         {
             service.Add(new Publish { PublishID = string.Empty, PublishName = "anson" });
-            Assert.IsTrue(db.Publish.Count() == 3);
+            Assert.IsTrue(Db.Publish.Count() == 3);
         }      
     }
 }
