@@ -10,7 +10,7 @@ namespace TddErp.UnitTest.Service
     public class PublishServiceTest
     {
         private PublishService service = null;
-        private IContext db = new FakeApplicationDbContext();
+        private IContext Db = new FakeApplicationDbContext();
 
         public PublishServiceTest()
         {
