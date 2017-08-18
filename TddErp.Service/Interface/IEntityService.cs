@@ -31,21 +31,21 @@ namespace TddErp.Service.Interface
 
         public virtual void Add(T entity)
         {
-            if (entity == null) throw new ArgumentNullException(nameof(entity));
+            if (entity == null) throw new ArgumentNullException("entity");
             dbset.Add(entity);
             db.SaveChanges();
         }
 
         public virtual void Update(T entity)
         {
-            if (entity == null) throw new ArgumentNullException(nameof(entity));
+            if (entity == null) throw new ArgumentNullException("entity");
             db.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
 
         public virtual void Delete(T entity)
         {
-            if (entity == null) throw new ArgumentNullException(nameof(entity));
+            if (entity == null) throw new ArgumentNullException("entity");
             dbset.Remove(entity);
             db.SaveChanges();
         }
