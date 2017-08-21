@@ -10,7 +10,7 @@
     {
         public BookGroup()
         {
-            Books = new HashSet<Books>();
+            books = new HashSet<Books>();
         }
 
         [Display(Name = "書藉大類編號")]
@@ -23,6 +23,6 @@
         [Required]
         public string BookGroupName { get; set; }
 
-        public virtual ICollection<Books> Books { get; set; }
+        public virtual ICollection<Books> books { get; set; }
     }
 }

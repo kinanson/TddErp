@@ -10,9 +10,7 @@ namespace TddErp.UnitTest.Service
     public class PublishServiceTest
     {
         private PublishService service = null;
-
-
-        private IContext Db = new FakeApplicationDbContext();
+        private IContext db = new FakeApplicationDbContext();
 
         public PublishServiceTest()
         {
@@ -21,15 +19,15 @@ namespace TddErp.UnitTest.Service
                 new Publish {PublishID="001" },
                 new Publish {PublishID="002" }
             };
-            Db.Publish = new FakeDbSet<Publish>(publishs);
-            service = new PublishService(Db);
+            db.Publish = new FakeDbSet<Publish>(publishs);
+            service = new PublishService(db);
         }
 
         [TestMethod]
         public void AddTest()
         {
             service.Add(new Publish { PublishID = string.Empty, PublishName = "anson" });
-            Assert.IsTrue(Db.Publish.Count() == 3);
+            Assert.IsTrue(db.Publish.Count() == 3);
         }      
     }
 }
